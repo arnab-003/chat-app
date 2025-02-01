@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp-Style Multi-User Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="usernamePrompt" class="username-prompt">
+        <input type="text" id="usernameInput" placeholder="Enter your name" />
+        <button id="joinBtn">Join Chat</button>
+    </div>
+
+    <div id="chat" class="chat-container" style="display:none;">
+        <div class="chat-header">
+            <img src="WhatsApp_icon.png" class="profile-img" alt="Profile">
+            <h2>Chat Room</h2>
+        </div>
+
+        <!-- Online Users List -->
+        <div id="usersList" class="users-list">
+            <h3>Online Users:</h3>
+            <ul id="users"></ul>
+        </div>
+
+        <div id="messages" class="chat-messages"></div>
+        <p id="typingIndicator" class="typing-indicator"></p>
+        
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Type a message..." />
+            <button id="sendBtn">➤</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
